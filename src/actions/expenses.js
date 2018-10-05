@@ -66,8 +66,6 @@ export const startSetExpenses = () => {
     return database.ref(`users/${uid}/expenses`).once('value').then((snapshot) => {
       const expenses = [];
       snapshot.forEach((childSnapshot) => {
-console.log(`childSnapshot: ${JSON.stringify(childSnapshot.val(),null,2)}`)
-
         expenses.push({
           id: childSnapshot.key,
           ...childSnapshot.val()
