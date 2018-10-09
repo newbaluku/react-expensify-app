@@ -1,0 +1,23 @@
+.box-layout {
+  align-items: center; // center vertically
+  background: url('/images/bg.jpg');
+  background-size: cover; // cover entire viewport
+  display: flex; // use to center box
+  height: 100vh; // cover entire viewport height
+  justify-content: center; // center horizontally
+  width: 100vw; // cover entire viewport width
+}
+
+.box-layout__box {
+  background: fade-out(white, .15); // has a box with translucent background
+  border-radius: 3px; // rounder corners
+  padding: $l-size $m-size; // padding at (top and bottom, left and right) padding 
+  text-align: center; // center align text and buttons in the box
+  width: 25rem; // fixed width
+}
+
+// h1
+.box-layout__title {
+  margin: 0 0 $m-size 0;
+  line-height: 1; // our title shd only has line height of 1
+}

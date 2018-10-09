@@ -1,0 +1,19 @@
+.button {
+  background: $blue;
+  border: none; // remove grey border
+  color: white;
+  display: inline-block; // have the vertical margins and padding takes effect for non-button element (like links). to make it looks more like button
+  font-weight: 300; // make font thinner
+  font-size: $font-size-large; // font size slightly bigger than paragraph text
+  line-height: 1; // since our button is always single line, there is no need to have hegiht between lines of text
+  padding: $s-size $m-size; // padding of text in button
+  text-decoration: none; // remove underline for links (that are used as button)
+}
+
+.button--link {
+  background: none; // remove background
+}
+
+.button--secondary {
+  background: #888;
+}

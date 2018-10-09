@@ -1,0 +1,64 @@
+.list-header {
+  background: $off-white;
+  border: 1px solid darken($off-white, 7%);
+  color: $grey;
+  display: flex;
+  justify-content: space-between;
+  padding: $s-size $m-size;
+}
+
+.list-body {
+  margin-bottom: $m-size;
+  @media (min-width: $desktop-breakpoint) {
+    margin-bottom: $l-size;
+  }
+}
+
+.list-item {
+  border: 1px solid darken($off-white, 7%);
+  border-top: none; // no top border since it will be duplicated by the border-bottom from item above
+  color: $dark-grey; // if not it will be default link color (blue)
+  display: flex;
+  flex-direction: column; // arrange items from top to bottom for mobile
+  padding: $s-size;
+  text-decoration: none;
+  transition: background .3s ease;
+  &:hover { // shorthand for --> .list-item:hover
+    background: $off-white;
+  }
+  @media (min-width: $desktop-breakpoint) {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: $m-size;
+  }
+}
+
+.list-item--message {
+  align-items: center;
+  color: $grey;
+  justify-content: center;
+  padding: $m-size;
+  &:hover {
+    background: none;
+  }
+}
+
+.list-item__title {
+  margin: 0;
+  word-break: break-all; // break long word into multiple lines
+}
+
+.list-item__subtitle {
+  color: $grey;
+  font-size: $font-size-small;
+}
+
+.list-item__data {
+  margin: $s-size 0 0 0; // for mobile, amount will be at the bottom, add margin to space out the date above
+  @media (min-width: $desktop-breakpoint) {
+    // for large screen, the amount will be on the right
+    margin: 0;
+    padding-left: $s-size; // add some padding to spaced out the desciption and the amount
+  } 
+}

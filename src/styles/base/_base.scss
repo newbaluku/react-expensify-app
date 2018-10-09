@@ -1,11 +1,21 @@
+* { // universal selector
+  // overite default (content-box, where it adjust the height
+  // and width to include margin and padding on top of
+  // the specified content dimension). This will allocates dimensions
+  // to exactly to the content.
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
-  background: white;
+  color: $dark-grey; // text color
+  // background: white;
   font-family: Helvetica, Arial, sans-serif;
   font-size: $m-size;
+  line-height: 1.6; // spacing between lines
 }
 
 button {
